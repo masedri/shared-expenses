@@ -2,18 +2,21 @@ import { PaymentDetail, Payment } from './types';
 
 const payment: Payment = {
   id: '',
-  getPaymentById(id = '') {
+  getPaymentById({ id }) {
     return {
+      id: '',
       date: '',
       description: '',
       value: 0,
       userName: '',
     };
   },
-  getPayments() {},
+  getPayments() {
+    return [];
+  },
 
   add(payment: PaymentDetail) {},
-  remove(paymentId: '') {},
+  remove({ id }) {},
 
   sortPaymentsByDate(date: string) {},
 };
